@@ -30,7 +30,6 @@ header > h3 {
   color: var(--cor2);
 }
 
-
 /* Configuração básica do slider */
 .slider {
   position: relative;
@@ -67,7 +66,7 @@ header > h3 {
   transform: translateX(-50%);
   display: flex;
   gap: 10px;
-  z-index:10;
+  z-index: 10;
 }
 
 .manual-btn {
@@ -81,6 +80,24 @@ header > h3 {
 
 .manual-btn:hover {
   background-color: gray;
+}
+
+.navigation-auto {
+  position: absolute;
+  width: 100%;
+  margin-top: 360px;
+  display: flex;
+  justify-content: center;
+}
+.navigation-auto div {
+  border: 2px solid var(--cor2);
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+.navigation-auto div:not(:last-child) {
+  margin-right: 40px;
 }
 
 /* Controle dos slides usando os inputs */

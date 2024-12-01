@@ -30,99 +30,83 @@ header > h3 {
   color: var(--cor2);
 }
 
+
+/* Configuração básica do slider */
 .slider {
+  position: relative;
+  width: 400px;
+  height: 300px;
   margin: 0 auto;
-  width: 800px;
-  height: 400px;
   overflow: hidden;
 }
 
+/* Área dos slides */
 .slides {
-  width: 400%;
-  height: 400px;
   display: flex;
-  transition: margin-left 0.5s ease;
+  width: 100%; /* 4 slides, cada um com 100% */
+  height: 100%;
+  transition: transform 0.5s ease-in-out; /* Efeito suave ao trocar */
 }
 
-.slides input {
-  display: none;
-}
-
+/* Cada slide ocupa 100% do container */
 .slide {
-  width: 25%;
-  position: relative;
+  flex: 0 0 100%; /* Cada slide tem largura de 100% */
 }
+
 .slide img {
-  width: 400px;
-  height: auto;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
+/* Botões de navegação manual */
 .manual-navigation {
   position: absolute;
-  width: 800px;
-  margin-top: -40px;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
-  justify-content: center;
+  gap: 10px;
+  z-index:10;
 }
 
 .manual-btn {
-  border: 2px solid white;
-  padding: 5px;
-  border-radius: 10px;
+  width: 15px;
+  height: 15px;
+  background-color: var(--cor2);
+  border-radius: 50%;
   cursor: pointer;
-  transition: 1s;
-}
-
-.manual-btn:not(:last-child) {
-  margin-right: 40px;
+  transition: background-color 0.3s ease;
 }
 
 .manual-btn:hover {
-  background-color: var(--cor2);
+  background-color: gray;
 }
 
+/* Controle dos slides usando os inputs */
 #radio1:checked ~ .slides {
-  margin-left: 0;
+  transform: translateX(0); /* Primeiro slide */
 }
+
 #radio2:checked ~ .slides {
-  margin-left: -25%;
+  transform: translateX(-100%); /* Segundo slide */
 }
+
 #radio3:checked ~ .slides {
-  margin-left: -50%; /* Ajuste para o segundo slide */
+  transform: translateX(-200%); /* Terceiro slide */
 }
+
 #radio4:checked ~ .slides {
-  margin-left: -75%; /* Ajuste para o terceiro slide */
+  transform: translateX(-300%); /* Quarto slide */
 }
 
-.navigation-auto {
-  border: 2px solid var(--cor2);
-  padding: 5px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 1s;
-}
+@media (max-width: 768px) {
+  .slider {
+    width: 100%; /* Ocupa toda a largura da tela */
+    height: auto; /* Ajusta altura proporcionalmente */
+  }
 
-.navigation-auto div {
-  position: absolute;
-  width: 400px;
-  margin-top: 360px;
-  display: flex;
-  justify-content: center;
-}
-
-.navigation-auto div:not(:last-child) {
-  margin-right: 40px;
-}
-
-#radio1:checked ~ .navagation-auto .auto-btn1 {
-  background-color: var(--cor2);
-}
-
-#radio2:checked ~ .navagation-auto .auto-btn1 {
-  background-color: var(--cor2);
-}
-
-#radio2:checked ~ .navagation-auto .auto-btn1 {
-  background-color: var(--cor2);
+  .slide img {
+    height: auto; /* Ajusta a altura automaticamente */
+  }
 }

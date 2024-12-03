@@ -8,3 +8,4 @@ setInterval(() => {
     counter = 1; // Reinicia no primeiro slide
   }
 }, interval);
+

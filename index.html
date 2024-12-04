@@ -5,51 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CROCHÊ</title>
     <link rel="stylesheet" href="style.css" />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Passion+One:wght@400;700;900&family=Sriracha&display=swap"
+      rel="stylesheet"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet">
-      <link rel="icon" href="imagens/imagens/favicon.ico" type="Image/favicon.icon">
-    
-      
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Passion+One:wght@400;700;900&family=Sriracha&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="imagens/imagens/favicon.ico"
+      type="Image/favicon.icon"
     />
   </head>
   <body>
     <header class="sparkle-header">
-      <h1>A oferta Termina em Breve!</h1>
+      <div class="sparkle-header">
+        <h1>A oferta Termina em Breve!</h1>
+
+        <div id="timer">29:00</div>
+        <!-- Timer regressivo de 29 minutos -->
+      </div>
     </header>
-    <h2>
+    <h2 id="cabeçalho">
       <br />
-      
-      Aprenda crochê de forma prática e completa! Receba 80 aulas passo a passo
-      Uma apostila digital com 1000 receitas e gráficos além de bônus e
-      garantias exclusivas
+
+      Aprenda crochê de forma prática e completa! Receba aulas passo a passo Uma
+      apostila digital com 1000 receitas e gráficos além de bônus e garantias
+      exclusivas
     </h2>
 
     <br />
     <h1 id="headerh1">
-      Descubra tudo o que este curso incrível tem a oferecer 😊
+      Veja agora mesmo como realizar um trançado diferente etc 😊
     </h1>
-<br>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/rIhWuspBxvY?si=ZpS_bQ1dd7IrS6cp&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <br>
+    <br />
+    <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/rIhWuspBxvY?si=ZpS_bQ1dd7IrS6cp&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>-->
+    <br />
 
-    <button class="sparkle-button" onclick="window.location.href='https://pay.kiwify.com.br/3R2qh1s';">
-      <span>Quero me inscrever <br />
-      e garantir meu acesso !</span>
+    <button
+      class="sparkle-button"
+      onclick="window.location.href='https://pay.kiwify.com.br/3R2qh1s';"
+    >
+      <span
+        >QUERO ME INSCREVER <br />
+        E GARANTIR MEU ACESSO</span
+      >
       <div class="sparkle-effects">
         <!-- Efeitos de brilho aleatórios -->
-        <div style="top: 20%; left: 10%; animation-delay: 0.1s;"></div>
-        <div style="top: 50%; left: 40%; animation-delay: 0.3s;"></div>
-        <div style="top: 80%; left: 70%; animation-delay: 0.5s;"></div>
-        <div style="top: 30%; left: 90%; animation-delay: 0.7s;"></div>
+        <div style="top: 20%; left: 10%; animation-delay: 0.1s"></div>
+        <div style="top: 50%; left: 40%; animation-delay: 0.3s"></div>
+        <div style="top: 80%; left: 70%; animation-delay: 0.5s"></div>
+        <div style="top: 30%; left: 90%; animation-delay: 0.7s"></div>
       </div>
     </button>
 
-    
-   
+    <div class="box">
+      <h1>Ultima Chance!</h1>
+      <p>
+        De <span class="linhafina">R$197,90</span> <br />Por Apenas: R$27,90
+      </p>
+      <p id="desconto">Desconto de 85,89%</p>
+    </div>
+
     <!--
       <input type="radio" name="radio-btn" id="radio1" checked />
       <input type="radio" name="radio-btn" id="radio2" />

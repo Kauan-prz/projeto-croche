@@ -2,14 +2,19 @@
 
 :root {
   --cor1: #7e61cc;
-  --cor2: #C462CC;
-  --cor3: #6268CC;
-  
+  --cor2: #c462cc;
+  --cor3: #6268cc;
 }
 
 * {
   margin: 0;
   padding: 0;
+}
+.edu-au-vic-wa-nt-arrows- {
+  font-family: "Edu AU VIC WA NT Arrows", cursive;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
 }
 .roboto-thin {
   font-family: "Roboto", sans-serif;
@@ -82,6 +87,49 @@
   font-weight: 900;
   font-style: italic;
 }
+
+.baloo-2 {
+  font-family: "Baloo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+#headerh1 {
+  color: #141414;
+  font-family: "Roboto", Sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  
+}
+
+header {
+  text-align: center;
+  background-color: var(--cor1);
+}
+
+header > h1 {
+  color: white;
+}
+
+header > h3 {
+  color: var(--cor2);
+}
+
+#timer {
+  font-size: 50px;
+  color: white;
+  font-weight: bold;
+  margin-top: 10px;
+  color: red;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+}
+
+#cabeçalho{
+  padding: 5px 2px;
+}
+
+
 .sparkle-header {
   position: relative;
   text-align: center;
@@ -99,7 +147,11 @@
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 10%, transparent 20%);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.2) 10%,
+    transparent 20%
+  );
   background-size: 10px 10px;
   animation: sparkle-animation 4s linear infinite;
 }
@@ -128,11 +180,8 @@ body {
   color: var(--cor1);
   font-family: "Roboto";
   text-align: center;
-  background-color: #6267cc77;
-  
+  background-color: #6267cc56;
 }
-
-
 
 body > h2 {
   font-size: 33px;
@@ -141,25 +190,25 @@ body > h2 {
   stroke-width: 0px;
   -webkit-text-stroke-color: #000;
   stroke: #000;
-  text-shadow: ;
+ 
 }
-
-
-
 
 .sparkle-button {
   position: relative;
   background: linear-gradient(45deg, #6a5acd, #8a2be2);
   color: white;
   border: none;
-  padding: 19px 75px;
-  font-size: 20px;
+  padding: 10px 80px;
+  font-size: 35px;
   font-weight: bold;
+  font-family: "baloo 2";
+  font-variant: small-caps;
   text-align: center;
   border-radius: 50px;
   cursor: pointer;
   overflow: hidden;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
+
 }
 
 .sparkle-button:hover {
@@ -168,7 +217,7 @@ body > h2 {
 }
 
 .sparkle-button:before {
-  content: '';
+  content: "";
   position: absolute;
   top: -50%;
   left: -50%;
@@ -207,7 +256,8 @@ body > h2 {
 }
 
 @keyframes sparkle {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0;
     transform: scale(0.5) translateY(0);
   }
@@ -217,28 +267,42 @@ body > h2 {
   }
 }
 
-
-
 #headerh1 {
   color: #141414;
   font-family: "Roboto", Sans-serif;
   font-size: 18px;
   font-weight: 500;
   font-weight: 700;
-
 }
 
-header {
-  text-align: center;
-  background-color: var(--cor1);
+
+  .box {
+    width: 300px;
+    padding: 20px 30px;
+    margin: 20px auto;
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px var(--cor3); /* Sombra suave */
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+.box > p {
+  font-size: 20px;
 }
 
-header > h1 {
-  color: white;
+.linhafina {
+  position: relative;
 }
 
-header > h3 {
-  color: var(--cor2);
+.linhafina::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 50%; /* Ajusta a posição vertical da linha */
+  width: 100%;
+  height: 1px; /* Define a espessura da linha */
+  background-color: red; /* Cor da linha */
 }
 
 /* Configuração básica do slider */
@@ -337,5 +401,52 @@ header > h3 {
 
   .slide img {
     height: auto; /* Ajusta a altura automaticamente */
+  }
+}
+
+@media (max-width: 768px) {
+  .sparkle-header h1 {
+    font-size: 1.5rem; /* Reduz o tamanho da fonte */
+  }
+
+  .sparkle-header h3 {
+    font-size: 1rem; /* Ajusta a fonte para h3 */
+  }
+
+  .box {
+    width: 100%; /* A caixa ocupa toda a largura da tela */
+    padding: 15px; /* Ajusta o padding */
+  }
+
+  .sparkle-button {
+    font-size: 1.5rem; /* Ajusta o tamanho do botão */
+    padding: 10px 40px; /* Ajusta o padding do botão */
+  }
+
+  .slider {
+    height: 250px; /* Ajusta a altura do slider */
+  }
+
+  .slide img {
+    height: 100%; /* Ajusta a altura da imagem */
+  }
+}
+
+@media (max-width: 480px) {
+  .sparkle-header h1 {
+    font-size: 1.2rem; /* Menor tamanho para telas muito pequenas */
+  }
+
+  .sparkle-button {
+    font-size: 1.2rem;
+    padding: 10px 30px; /* Ajusta o tamanho do botão */
+  }
+
+  .slider {
+    height: 200px; /* Reduz a altura do slider para telas muito pequenas */
+  }
+
+  .box {
+    padding: 10px 20px; /* Ajusta o padding da caixa */
   }
 }

@@ -288,7 +288,7 @@ body > h2 {
 }
 
 .color-band {
-  position: absolute;
+  position: relative;
   font-family: "roboto";
   top: auto;
   color: white;
@@ -297,8 +297,27 @@ body > h2 {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
   height: 300px; /* Altura da faixa */
   background: linear-gradient(90deg, var(--cor2), var(--cor3), var(--cor2));
+  overflow: hidden;
+  display:flex ;
+  align-items: center;
   background-size: 300%; /* Tamanho maior para suavidade */
   animation: gradientFlow 30s infinite; /* Animação contínua */
+}
+.text-container {
+  position: absolute; /* Permite posicionar o texto dentro da faixa */
+  top: 10px; /* Distância do topo da faixa */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translateX(-50%); /* Ajusta a posição exata para centralizar */
+  z-index: 10; /* Garante que o texto fique acima do carrossel */
+  text-align: center; /* Centraliza o texto internamente */
+}
+
+/* Estilização do texto */
+.text-container p {
+  font-size: 35px;
+  color: white;
+  font-weight: bold;
+  margin: 0; /* Remove margens padrão */
 }
 /* Contêiner do carrossel */
 .carousel {
@@ -314,17 +333,22 @@ body > h2 {
 /* Faixa de imagens em rotação */
 .carousel-track {
   display: flex;
+  align-items: center;
   animation: carouselMove 30s linear infinite;
   width: calc(100% * 12); /* 6 imagens + 6 duplicadas para loop */
 }
 
 /* Estilização das imagens */
 .carousel-track img {
-  width: auto;
-  height: 50%; /* Ocupa toda a altura da faixa */
+  width: 150px;
+  height:auto; /* Ocupa toda a altura da faixa */
   margin: 0 10px; /* Espaçamento entre as imagens */
   object-fit: cover; /* Ajusta o enquadramento da imagem */
   border-radius: 10px; /* Opcional: arredonda as bordas das imagens */
+  transition: transform 0.3s ease;
+}
+.carousel-track img:hover {
+  transform: scale(1.2); /* Aumenta ligeiramente a imagem */
 }
 
 /* Configuração básica do slider */

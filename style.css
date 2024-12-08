@@ -2,8 +2,8 @@
 
 :root {
   --cor1: #7e61cc;
-  --cor2: #c462cc;
-  --cor3: #6268cc;
+  --cor2: #c9a54f;
+  --cor3: #c9a54f;
 }
 
 * {
@@ -437,6 +437,23 @@ body > h2 {
 
 #radio4:checked ~ .slides {
   transform: translateX(-300%); /* Quarto slide */
+}
+
+.carousel-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza o conteúdo horizontalmente */
+  justify-content: center; /* Centraliza o conteúdo verticalmente */
+}
+
+.carousel {
+  margin-bottom: 20px; /* Espaço entre o carrossel e o texto abaixo */
+}
+
+.carousel-text-below {
+  text-align: center; /* Alinha o texto no centro */
+  margin-top: 10px; /* Ajuste para separar do carrossel */
+}
 }
 
 @media (max-width: 768px) {

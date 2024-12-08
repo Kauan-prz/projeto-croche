@@ -9,6 +9,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 .roboto-thin {
   font-family: "Roboto", sans-serif;
@@ -166,6 +167,16 @@ body {
   font-family: "Roboto";
   text-align: center;
   background-color: #6267cc56;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+header, h1, h2, button,{
+  text-align: center;
+  margin: auto;
+  max-width: 90%;
 }
 
 body > h2 {
@@ -423,21 +434,6 @@ body > h2 {
 }
 
 /* Controle dos slides usando os inputs */
-#radio1:checked ~ .slides {
-  transform: translateX(0); /* Primeiro slide */
-}
-
-#radio2:checked ~ .slides {
-  transform: translateX(-100%); /* Segundo slide */
-}
-
-#radio3:checked ~ .slides {
-  transform: translateX(-200%); /* Terceiro slide */
-}
-
-#radio4:checked ~ .slides {
-  transform: translateX(-300%); /* Quarto slide */
-}
 
 .carousel-container {
   display: flex;
@@ -454,16 +450,28 @@ body > h2 {
   text-align: center; /* Alinha o texto no centro */
   margin-top: 10px; /* Ajuste para separar do carrossel */
 }
-}
+
 
 @media (max-width: 768px) {
-  .slider {
-    width: 100%; /* Ocupa toda a largura da tela */
-    height: auto; /* Ajusta altura proporcionalmente */
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  h2 {
+    font-size: 1.2rem;
+  }
+  
+  button {
+    font-size: 1rem;
+    padding: 8px;
   }
 
-  .slide img {
-    height: auto; /* Ajusta a altura automaticamente */
+  .box {
+    padding: 10px;
+  }
+  
+  .carousel img {
+    width: 95%;
   }
 }
 @keyframes gradientFlow {
@@ -485,4 +493,8 @@ body > h2 {
   100% {
     transform: translateX(-50%); /* Move o carrossel em metade do seu tamanho */
   }
+}
+img {
+  max-width: 100%;
+  height: auto;
 }

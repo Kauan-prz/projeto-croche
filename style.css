@@ -11,6 +11,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 .roboto-thin {
   font-family: "Roboto", sans-serif;
   font-weight: 100;
@@ -98,17 +99,26 @@
 }
 
 header {
-  text-align: center;
-  font-size: 30px;
   background-color: var(--cor1);
+  padding: 10px;  /* Ajuste a altura do header diminuindo o padding */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none; /* Remove qualquer borda que possa estar aparecendo */
+  box-shadow: none; /* Remove a sombra */
 }
 
 header > h1 {
   color: white;
+  font-size: 2rem; /* Tamanho da fonte para telas maiores */
+  margin: 0;
 }
 
 header > h3 {
   color: var(--cor2);
+  font-size: 1.2rem; /* Tamanho da fonte para telas maiores */
 }
 
 #cabeçalho {
@@ -162,6 +172,7 @@ header > h3 {
   font-size: 18px;
   margin-top: 10px;
 }
+
 body {
   color: var(--cor1);
   font-family: "Roboto", sans-serif;
@@ -173,19 +184,23 @@ body {
   padding: 0;
   overflow-x: hidden;
 }
+
 img {
   max-width: 100%;
   height: auto;
 }
+
 header, h1, h2 {
   max-width: 90%; /* Garante alinhamento em telas pequenas */
   margin: auto;
 }
+
 header, h1, h2, button {
   text-align: center;
   margin: auto;
   max-width: 100%;
 }
+
 button {
   display: block;
   width: 60%;
@@ -202,6 +217,7 @@ button {
 button:hover {
   opacity: 0.9;
 }
+
 body > h2 {
   font-size: 33px;
   font-weight: 900;
@@ -284,14 +300,6 @@ body > h2 {
   }
 }
 
-#headerh1 {
-  color: #141414;
-  font-family: "Roboto", Sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-  font-weight: 700;
-}
-
 .box {
   width: 90%;
   max-width: 300px;
@@ -304,6 +312,7 @@ body > h2 {
   text-align: center;
   font-family: Arial, sans-serif;
 }
+
 .box > p {
   font-size: 1rem;
 }
@@ -333,13 +342,14 @@ body > h2 {
   height: 300px; /* Altura da faixa */
   background: linear-gradient(90deg, var(--cor2), var(--cor3), var(--cor2));
   overflow: hidden;
-  display:flex ;
+  display: flex;
   height: 280px;
   justify-content: center;
   align-items: center;
   background-size: 300%; /* Tamanho maior para suavidade */
   animation: gradientFlow 30s infinite; /* Animação contínua */
 }
+
 .text-container {
   position: absolute; /* Permite posicionar o texto dentro da faixa */
   top: 10px; /* Distância do topo da faixa */
@@ -356,6 +366,7 @@ body > h2 {
   font-weight: bold;
   margin: 0; /* Remove margens padrão */
 }
+
 /* Contêiner do carrossel */
 .carousel {
   position: absolute;
@@ -380,12 +391,13 @@ body > h2 {
 /* Estilização das imagens */
 .carousel-track img {
   width: 150px;
-  height:auto; /* Ocupa toda a altura da faixa */
+  height: auto; /* Ocupa toda a altura da faixa */
   margin: 0 10px; /* Espaçamento entre as imagens */
   object-fit: cover; /* Ajusta o enquadramento da imagem */
   border-radius: 10px; /* Opcional: arredonda as bordas das imagens */
   transition: transform 0.3s ease;
 }
+
 .carousel-track img:hover {
   transform: scale(1.2); /* Aumenta ligeiramente a imagem */
 }
@@ -450,6 +462,7 @@ body > h2 {
   display: flex;
   justify-content: center;
 }
+
 .navigation-auto div {
   border: 2px solid var(--cor2);
   padding: 5px;
@@ -457,12 +470,12 @@ body > h2 {
   cursor: pointer;
   transition: 1s;
 }
+
 .navigation-auto div:not(:last-child) {
   margin-right: 40px;
 }
 
 /* Controle dos slides usando os inputs */
-
 .carousel-container {
   display: flex;
   flex-direction: column;
@@ -511,13 +524,13 @@ body > h2 {
   background-color: gray;
 }
 
-
 @media (min-width: 768px) {
   .carousel img {
     max-width: 150px; /* Tamanho maior em tablets */
   }
 }
-h1, h2, h3 {
+
+h1, h2, h3, header {
   font-size: 1.2rem; /* Ajusta para dispositivos móveis */
 }
 
@@ -528,18 +541,20 @@ h1, h2, h3 {
 }
 
 @media (min-width: 768px) {
-  h1, h2 {
+  h1, h2, header {
     font-size: 2rem; /* Tamanho maior em tablets e desktops */
   }
 }
+
 @media (min-width: 768px) {
   .sparkle-button {
     font-size: 1.5rem; /* Volta ao tamanho normal para telas maiores */
     padding: 10px 40px;
   }
 }
+
 @media (max-width: 768px) {
-  h1 {
+  h1, header {
     font-size: 1.8rem;
   }
   
@@ -559,20 +574,24 @@ h1, h2, h3 {
   .carousel img {
     width: 90%;
   }
+
   .sparkle-effects {
     display: none; /* Esconde efeitos em telas menores */
   }
+
   .text-container p {
     font-size: 1rem;
   }
+  
   @media (max-width: 480px) {
-    h1 {
+    h1, header {
       font-size: 1.5rem;
     }
   
     h2 {
       font-size: 1rem;
     }
+    
     .carousel img {
       max-width: 80px; /* Reduz tamanho em telas menores */
     }
@@ -590,6 +609,7 @@ h1, h2, h3 {
     }
   }
 }
+
 @keyframes gradientFlow {
   0% {
     background-position: 0% 50%;
@@ -608,5 +628,34 @@ h1, h2, h3 {
   }
   100% {
     transform: translateX(-50%); /* Move o carrossel em metade do seu tamanho */
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 10px;
+  }
+
+  header > h1 {
+    font-size: 1.8rem; /* Tamanho menor da fonte */
+  }
+
+  header > h3 {
+    font-size: 1rem; /* Tamanho menor da fonte */
+  }
+}
+
+/* Responsividade para telas menores que 480px */
+@media (max-width: 480px) {
+  header {
+    padding: 8px;
+  }
+
+  header > h1 {
+    font-size: 1.5rem; /* Tamanho ainda menor da fonte */
+  }
+
+  header > h3 {
+    font-size: 0.9rem; /* Tamanho ainda menor da fonte */
   }
 }

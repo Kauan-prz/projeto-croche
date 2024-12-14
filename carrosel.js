@@ -9,3 +9,13 @@ setInterval(() => {
   }
 }, interval);
 
+document.querySelectorAll("details").forEach((detail) => {
+  detail.addEventListener("toggle", function () {
+    const content = this.querySelector("div");
+    if (this.open) {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } else {
+      content.style.maxHeight = "0";
+    }
+  });
+});

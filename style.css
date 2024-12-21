@@ -352,7 +352,7 @@ body > h2 {
   background: linear-gradient(90deg, var(--cor2), var(--cor3), var(--cor2));
   overflow: hidden;
   display: flex;
-  height: 280px;
+  height: 295px;
   justify-content: center;
   align-items: center;
   background-size: 300%; /* Tamanho maior para suavidade */
@@ -363,7 +363,8 @@ body > h2 {
   position: absolute; /* Permite posicionar o texto dentro da faixa */
   top: 10px; /* Distância do topo da faixa */
   left: 50%; /* Centraliza horizontalmente */
-  transform: translateX(-50%); /* Ajusta a posição exata para centralizar */
+  transform: translateX(-50%) translateY(-20px); /* Ajuste de centralização horizontal e deslocamento para cima */
+  
   z-index: 10; /* Garante que o texto fique acima do carrossel */
   text-align: center; /* Centraliza o texto internamente */
 }
@@ -373,7 +374,8 @@ body > h2 {
   font-size: 2rem;
   color: white;
   font-weight: bold;
-  margin: 0; /* Remove margens padrão */
+  padding: 10px;
+
 }
 
 /* Contêiner do carrossel */
@@ -532,6 +534,11 @@ body > h2 {
 .manual-btn:hover {
   background-color: gray;
 }
+
+.img7dias{
+  
+}
+
 .faq-container {
   max-width: 600px;
   margin: auto;

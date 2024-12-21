@@ -600,7 +600,61 @@ details > div {
     max-width: 150px; /* Tamanho maior em tablets */
   }
 }
+.faq-container details {
+  margin-bottom: 10px;
+  border: 2px solid #ff69b4;
+  border-radius: 5px;
+  overflow: hidden;
+}
 
+.faq-container summary {
+  cursor: pointer;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #fff;
+  color: #ff69b4;
+  transition: background-color 1s ease, transform 1s ease; /* Animações de fundo e movimento */
+}
+
+.faq-container summary:hover {
+  background-color: #ffe1ed;
+  transform: translateX(8px); /* Deslocamento suave */
+}
+
+.faq-container details[open] summary {
+  background-color: #ffe1ed;
+}
+
+.faq-container details > p {
+  margin: 0;
+  padding: 0 15px;
+  max-height: 0; /* Inicialmente fechado */
+  opacity: 0; /* Inicialmente invisível */
+  overflow: hidden;
+  transition: max-height 0.7s ease-out, opacity 0.7s ease-out; /* Transições suaves */
+  background-color: #ffe1ed;
+  color: #141414;
+}
+
+.faq-container details[open] > p {
+  max-height: 500px; /* Valor suficiente para o conteúdo */
+  opacity: 1; /* Torna o conteúdo visível */
+  transition-delay: 1s; /* Sem atraso ao abrir */
+}
+
+
+.sparkle-header::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 10%, transparent 20%);
+  background-size: 10px 10px;
+  animation: sparkle-animation 4s linear infinite;
+}
 h1,
 h2,
 h3,
@@ -735,5 +789,14 @@ header {
 
   header > h3 {
     font-size: 0.9rem; /* Tamanho ainda menor da fonte */
+  }
+}
+
+@keyframes sparkle-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

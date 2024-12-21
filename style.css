@@ -204,9 +204,9 @@ body {
   width: 30px; /* Tamanho do ícone */
   height: 30px; /* Tamanho do ícone */
 }
-.img7d{ 
+picture > img{ 
 
-  max-width: 100%; /* A imagem vai ocupar no máximo 100% da largura do contêiner */
+  max-width: 56%; /* A imagem vai ocupar no máximo 100% da largura do contêiner */
   height: auto;
 }
 img {

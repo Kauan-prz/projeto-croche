@@ -157,7 +157,7 @@ header > h3 {
     transparent 20%
   );
   background-size: 10px 10px;
-  animation: sparkle-animation 4s linear infinite;
+  animation: sparkle-animation 5s linear infinite;
 }
 
 /* Animação de movimento */
@@ -602,7 +602,7 @@ details > div {
 }
 .faq-container details {
   margin-bottom: 10px;
-  border: 2px solid #ff69b4;
+  border: 2px solid var(--cor1);
   border-radius: 5px;
   overflow: hidden;
 }
@@ -613,7 +613,7 @@ details > div {
   font-size: 16px;
   font-weight: bold;
   background-color: #fff;
-  color: #ff69b4;
+  color: var(--cor1);
   transition: background-color 1s ease, transform 1s ease; /* Animações de fundo e movimento */
 }
 
@@ -794,9 +794,18 @@ header {
 
 @keyframes sparkle-animation {
   0% {
-    transform: rotate(0deg);
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(10px, 10px); /* Movendo um pouco para baixo e para a direita */
+  }
+  50% {
+    transform: translate(20px, 20px); /* Movendo um pouco mais para baixo e para a direita */
+  }
+  75% {
+    transform: translate(30px, 30px); /* Aumentando ainda mais a queda */
   }
   100% {
-    transform: rotate(360deg);
+    transform: translate(50px, 50px); /* Finalizando a queda diagonal */
   }
 }

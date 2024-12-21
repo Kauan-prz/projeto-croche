@@ -1,5 +1,5 @@
 let counter = 1; // Slide inicial
-const interval = 5000; // Intervalo de 5 segundos
+const interval = 8000; // Intervalo de 5 segundos
 
 setInterval(() => {
   document.getElementById(`radio${counter}`).checked = true;

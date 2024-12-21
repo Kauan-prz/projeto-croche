@@ -628,39 +628,45 @@ details > div {
   }
 }
 .faq-container details {
-  margin-bottom: 10px;
+  margin-bottom: 3px;
   border: 2px solid var(--cor1);
-  border-radius: 5px;
+  border-radius: 8px;
   overflow: hidden;
+  
 }
 
 .faq-container summary {
-  cursor: pointer;
-  padding: 10px 15px;
-  font-size: 16px;
+  text-align: left; /* Garante que a pergunta esteja alinhada à esquerda */
+  padding: 15px 20px; /* Ajuste o padding para não deixar o texto colado */
+  font-size: 18px;
   font-weight: bold;
   background-color: #fff;
   color: var(--cor1);
+  border-radius: 5px;
   transition: background-color 1s ease, transform 1s ease; /* Animações de fundo e movimento */
 }
 
 .faq-container summary:hover {
-  background-color: white;
+  background-color: #e6e6e6;
   transform: translateX(4px); /* Deslocamento suave */
 }
 
 .faq-container details[open] summary {
   background-color: white;
+  border: none;
 }
 
 .faq-container details > p {
   margin: 0;
-  padding: 0 15px;
+  text-align: left;
+  padding: 15px 20px; /* Aumenta o espaço dentro da resposta */
+  font-size: 16px;
   max-height: 0; /* Inicialmente fechado */
   opacity: 0; /* Inicialmente invisível */
   overflow: hidden;
   transition: max-height 0.7s ease-out, opacity 0.7s ease-out; /* Transições suaves */
- 
+ border:none;
+ background-color: #ff69b480;
   color: #141414;
 }
 

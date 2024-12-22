@@ -636,25 +636,31 @@ details > div {
   left: 0;
   width: 100%;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-  height: 300px; /* Altura da faixa */
+  min-height: 400px; /* Altura da faixa */
   background: linear-gradient(90deg, var(--cor2), var(--cor3), var(--cor2));
   overflow: hidden;
   display: flex;
-  height: 295px;
+ 
   justify-content: center;
   align-items: center;
   background-size: 300%; /* Tamanho maior para suavidade */
   animation: gradientFlow 30s infinite; /* Animação contínua */
+  padding: 20px;
 }
+
 
 .pic3 img {
 
   width: 100%; /* Ajusta a largura das imagens para que se adaptem ao contêiner */
   max-width: 286px;
-  object-fit: contain;
+  object-fit: cover;
   height: auto; /* Mantém a proporção da imagem */
   border-radius: 6px; /* (Opcional) Deixa os cantos das imagens arredondados */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* (Opcional) Adiciona uma sombra leve */
+}
+.overlay{
+  font-family: "Baloo 2";
+ 
 }
 @media (max-width: 768px) {
   .pic3 img {

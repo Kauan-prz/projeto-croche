@@ -118,7 +118,7 @@ header > h3 {
 
 /* Estilização do texto */
 .sparkle-header h1 {
-  font-size: 0.1em;
+  font-size: 30px;
   margin-bottom: 10px;
   border: none;
 }
@@ -152,7 +152,7 @@ body {
 }
 picture > img{ 
 
-  max-width: 51%; /* A imagem vai ocupar no máximo 100% da largura do contêiner */
+  max-width: 72%; /* A imagem vai ocupar no máximo 100% da largura do contêiner */
   height: auto;
 }
 img {
@@ -178,7 +178,7 @@ button {
 
 button {
   display: block;
-  width: 60%;
+  width: 80%;
   margin: 20px auto;
   padding: 10px;
   font-size: 1.2rem;
@@ -316,7 +316,8 @@ body > h2 {
   left: 0;
   width: 100%;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-  height: 350px; /* Altura da faixa */
+  margin-bottom: -25px;
+  height: 200px; /* Altura da faixa */
   background: linear-gradient(90deg, var(--cor2), var(--cor3), var(--cor2));
   overflow: hidden;
   display: flex;
@@ -579,20 +580,20 @@ details > div {
   font-family: "roboto";
   top: auto;
   gap: 20px;
+  font-size: 25px;
   color: white;
   left: 0;
   width: 100%;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-  min-height: 400px; /* Altura da faixa */
+  min-height: 240px; /* Altura da faixa */
   background: linear-gradient(90deg, var(--cor2), var(--cor3), var(--cor2));
   overflow: hidden;
-  display: flex;
- 
+display: grid;
   justify-content: center;
   align-items: center;
   background-size: 300%; /* Tamanho maior para suavidade */
   animation: gradientFlow 30s infinite; /* Animação contínua */
-  padding: 20px;
+  padding: 38px;
 }
 
 
@@ -602,7 +603,7 @@ details > div {
   max-width: 286px;
   object-fit: contain;
   height: auto; /* Mantém a proporção da imagem */
-  border-radius: 6px; /* (Opcional) Deixa os cantos das imagens arredondados */
+  border-radius: 30px; /* (Opcional) Deixa os cantos das imagens arredondados */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* (Opcional) Adiciona uma sombra leve */
 }
 .overlay{
@@ -771,7 +772,7 @@ header {
     }
 
     .carousel img {
-      max-width: 80px; /* Reduz tamanho em telas menores */
+      max-width: 110px; /* Reduz tamanho em telas menores */
     }
     .carousel {
       margin-bottom: 10px;

@@ -150,6 +150,24 @@ body {
   width: 30px; /* Tamanho do ícone */
   height: 30px; /* Tamanho do ícone */
 }
+.video-container {
+  position: relative;
+  width: 100%; /* Ocupa toda a largura disponível */
+  max-width: 800px; /* Valor opcional para limitar a largura */
+  margin: 0 auto; /* Centraliza o vídeo */
+  padding-bottom: 56.25%; /* Define a altura com base na proporção 16:9 */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none; /* Remove bordas do iframe */
+}
 picture > img{ 
 
   max-width: 72%; /* A imagem vai ocupar no máximo 100% da largura do contêiner */
@@ -647,7 +665,7 @@ display: grid;
 .faq-container summary {
   text-align: left; /* Garante que a pergunta esteja alinhada à esquerda */
   padding: 15px 20px; /* Ajuste o padding para não deixar o texto colado */
-  font-size: 18px;
+  font-size: 19px;
   font-weight: bold;
   background-color: #fff;
   color: var(--cor1);
@@ -668,21 +686,24 @@ display: grid;
 .faq-container details > p {
   margin: 0;
   text-align: left;
+  font-family: "baloo 2";
   padding: 15px 20px; /* Aumenta o espaço dentro da resposta */
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: lighter;
   max-height: 0; /* Inicialmente fechado */
   opacity: 0; /* Inicialmente invisível */
   overflow: hidden;
-  transition: max-height 0.7s ease-out, opacity 0.7s ease-out; /* Transições suaves */
- border:none;
- background-color: #ff69b480;
-  color: #141414;
+  transition: max-height 0.5s ease-out, opacity 0.5s ease; /* Transições suaves */
+ border-radius:5px;
+ background-color:  #ee5fee;
+  color: #fff;
+  will-change: max-height, opacity;
 }
 
 .faq-container details[open] > p {
   max-height: 500px; /* Valor suficiente para o conteúdo */
   opacity: 1; /* Torna o conteúdo visível */
-  transition-delay: 1s; /* Sem atraso ao abrir */
+  transition-delay: 0.2s; /* Sem atraso ao abrir */
 }
 
 
@@ -697,6 +718,10 @@ display: grid;
   background-size: 10px 10px;
   animation: sparkle-animation 4s linear infinite;
 }
+  .bonus > h2{
+      color: black;
+    font-size: 18px;
+  }
 h1,
 h2,
 h3,

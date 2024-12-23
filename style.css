@@ -4,6 +4,7 @@
   --cor1: #7e61cc;
   --cor2: #6268CC;
   --cor3: #c9a54f;
+  --cor4: #C462CC;
 }
 
 * {
@@ -158,6 +159,9 @@ body {
   padding-bottom: 56.25%; /* Define a altura com base na proporção 16:9 */
   height: 0;
   overflow: hidden;
+  border: 5px solid var(--cor4); /* Adiciona a borda ao contêiner */
+  border-radius: 10px; /* Deixa os cantos arredondados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
 }
 
 .video-container iframe {

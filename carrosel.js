@@ -1,13 +1,21 @@
-let counter = 1; // Slide inicial
-const interval = 8000; // Intervalo de 5 segundos
+let counter = 0; // Slide inicial
+const slides = document.querySelectorAll('.carousel img'); // Seleciona todas as imagens
+const totalSlides = slides.length; // Total de imagens
+const interval = 2000; // Intervalo de 2 segundos para cada imagem (ajustado para mais rápido)
+const transitionDuration = 500; // Tempo de transição mais rápido (500ms)
 
-setInterval(() => {
-  document.getElementById(`radio${counter}`).checked = true;
-  counter++;
-  if (counter > 4) {
-    counter = 1; // Reinicia no primeiro slide
-  }
-}, interval);
+function changeSlide() {
+  counter = (counter + 1) % totalSlides; // Incrementa o contador e reinicia ao atingir o final
+  const track = document.querySelector('.carousel-track'); // O contêiner do carrossel
+
+  // Calcula a nova posição da imagem no carrossel
+  const newTransformValue = -counter * 100; 
+  track.style.transition = `transform ${transitionDuration}ms ease-in-out`; // Transição de 500ms
+  track.style.transform = `translateX(${newTransformValue}%)`;
+}
+
+// Chama a função para mudar o slide a cada 2 segundos
+setInterval(changeSlide, interval);
 
 document.querySelectorAll('.faq-container details').forEach((detail) => {
   const content = detail.querySelector("p");

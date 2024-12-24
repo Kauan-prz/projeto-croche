@@ -13,7 +13,7 @@
   box-sizing: border-box;
 }
 
-/* Roboto Font Variants */
+
 .roboto-thin, .roboto-light, .roboto-regular, .roboto-medium, .roboto-bold, .roboto-black,
 .roboto-thin-italic, .roboto-light-italic, .roboto-regular-italic, .roboto-medium-italic, 
 .roboto-bold-italic, .roboto-black-italic {
@@ -30,7 +30,7 @@
 .roboto-thin-italic, .roboto-light-italic, .roboto-regular-italic, .roboto-medium-italic, 
 .roboto-bold-italic, .roboto-black-italic { font-style: italic; }
 
-/* Baloo 2 Font */
+
 .baloo-2 {
   font-family: "Baloo 2", sans-serif;
   font-optical-sizing: auto;
@@ -45,32 +45,33 @@ header > h1,
 
 #headerh1 {
   color: #141414;
-  font-family: "Roboto", Sans-serif;
-  font-size: 23px;
-  font-weight: 500;
+  font-family: "baloo 2", Sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  word-wrap: break-word;
 }
 
 header {
   background-color: var(--cor1);
-  padding: 10px; /* Ajuste a altura do header diminuindo o padding */
+  padding: 10px; 
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: none; /* Remove qualquer borda que possa estar aparecendo */
-  box-shadow: none; /* Remove a sombra */
+  border: none; 
+  box-shadow: none; 
 }
 
 header > h1 {
   color: white;
-  font-size: 2rem; /* Tamanho da fonte para telas maiores */
+  font-size: 2rem; 
   margin: 0;
 }
 
 header > h3 {
   color: 
-  font-size: 1.2rem; /* Tamanho da fonte para telas maiores */
+  font-size: 1.2rem; 
 }
 
 #cabeçalho {
@@ -83,14 +84,14 @@ header > h3 {
   text-align: center;
   background: linear-gradient(45deg, var(--cor2), var(--cor1));
   color: white;
-  white-space: normal; /* Permite que o texto quebre, mas somente uma vez */
-  word-wrap: break-word; /* Faz o texto quebrar quando necessário */
+  white-space: normal; 
+  word-wrap: break-word; 
   font-size: 4em;
   padding: 0px;
-  overflow: hidden; /* Para garantir que partículas fiquem limitadas */
+  overflow: hidden; 
 }
 
-/* Brilho no fundo */
+
 .sparkle-header::before {
   content: "";
   position: absolute;
@@ -107,7 +108,7 @@ header > h3 {
   animation: sparkle-animation 5s linear infinite;
 }
 
-/* Animação de movimento */
+
 @keyframes sparkle-animation {
   0% {
     transform: translate(0, 0);
@@ -117,7 +118,7 @@ header > h3 {
   }
 }
 
-/* Estilização do texto */
+
 .sparkle-header h1 {
   font-size: 30px;
   margin-bottom: 10px;
@@ -137,31 +138,31 @@ body {
 }
 .whatsapp-button {
   position: fixed;
-  bottom: 20px; /* Distância do fundo da tela */
-  right: 20px; /* Distância da direita da tela */
-  background-color: #25d366; /* Cor de fundo do WhatsApp */
-  border-radius: 50%; /* Forma redonda */
+  bottom: 20px; 
+  right: 20px; 
+  background-color: #25d366; 
+  border-radius: 50%; 
   padding: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombras */
-  z-index: 9999; /* Para garantir que o botão fique em cima de outros elementos */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+  z-index: 9999; 
 }
 
-/* Estilo do ícone do WhatsApp */
+
 .whatsapp-button img {
-  width: 30px; /* Tamanho do ícone */
-  height: 30px; /* Tamanho do ícone */
+  width: 30px; 
+  height: 30px; 
 }
 .video-container {
   position: relative;
-  width: 100%; /* Ocupa toda a largura disponível */
-  max-width: 800px; /* Valor opcional para limitar a largura */
-  margin: 0 auto; /* Centraliza o vídeo */
-  padding-bottom: 56.25%; /* Define a altura com base na proporção 16:9 */
+  width: 100%; 
+  max-width: 800px; 
+  margin: 0 auto; 
+  padding-bottom: 56.25%; 
   height: 0;
   overflow: hidden;
-  border: 5px solid var(--cor4); /* Adiciona a borda ao contêiner */
-  border-radius: 10px; /* Deixa os cantos arredondados */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+  border: 5px solid var(--cor4); 
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 .video-container iframe {
@@ -170,11 +171,11 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  border: none; /* Remove bordas do iframe */
+  border: none; 
 }
 picture > img{ 
 
-  max-width: 72%; /* A imagem vai ocupar no máximo 100% da largura do contêiner */
+  max-width: 72%; 
   height: auto;
 }
 img {
@@ -185,7 +186,7 @@ img {
 header,
 h1,
 h2 {
-  max-width: 90%; /* Garante alinhamento em telas pequenas */
+  max-width: 90%; 
   margin: auto;
 }
 
@@ -220,7 +221,7 @@ body > h2 {
   font-weight: 900;
   -webkit-text-stroke-width: 0px;
   stroke-width: 0px;
-  white-space: normal; /* Permite que o texto quebre, mas somente uma vez */
+  white-space: normal; 
   word-wrap: break-word;
   -webkit-text-stroke-color: #000;
   stroke: #000;
@@ -245,7 +246,7 @@ body > h2 {
 
 .sparkle-button:hover {
   box-shadow: 0 0 30px 10px rgba(138, 43, 226, 0.6);
-  transform: scale(1.05); /* Leve aumento do tamanho */
+  transform: scale(1.05); 
 }
 
 .sparkle-button:before {
@@ -306,8 +307,8 @@ body > h2 {
   margin: 20px auto;
   background-color: #f0f0f0;
   border: 2px solid #ccc;
-  border-radius: 10px; /* Bordas arredondadas */
-  box-shadow: 0 4px 8px var(--cor3); /* Sombra suave */
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px var(--cor3); 
   text-align: center;
   font-family: Arial, sans-serif;
 }
@@ -324,10 +325,10 @@ body > h2 {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 50%; /* Ajusta a posição vertical da linha */
+  bottom: 50%; 
   width: 100%;
-  height: 1px; /* Define a espessura da linha */
-  background-color: red; /* Cor da linha */
+  height: 1px; 
+  background-color: red; 
 }
 
 .color-band {
@@ -339,28 +340,28 @@ body > h2 {
   width: 100%;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
   margin-bottom: -25px;
-  height: 200px; /* Altura da faixa */
+  height: 240px; 
   background: linear-gradient(90deg, var(--cor2), var(--cor3), var(--cor2));
   overflow: hidden;
   display: flex;
   
   justify-content: center;
   align-items: center;
-  background-size: 300%; /* Tamanho maior para suavidade */
-  animation: gradientFlow 30s infinite; /* Animação contínua */
+  background-size: 300%; 
+  animation: gradientFlow 30s infinite; 
 }
 
 .text-container {
-  position: absolute; /* Permite posicionar o texto dentro da faixa */
-  top: 20px; /* Distância do topo da faixa */
-  left: 35%; /* Centraliza horizontalmente */
-  transform: translateX(-50%) translateY(-20px); /* Ajuste de centralização horizontal e deslocamento para cima */
+  position: absolute; 
+  top: 20px; 
+  left: 35%; 
+  transform: translateX(-50%) translateY(-20px); 
   white-space: nowrap;
-  z-index: 10; /* Garante que o texto fique acima do carrossel */
-  text-align: center; /* Centraliza o texto internamente */
+  z-index: 10; 
+  text-align: center; 
 }
 
-/* Estilização do texto */
+
 .text-container p {
   font-size: 2rem;
   color: white;
@@ -369,38 +370,69 @@ body > h2 {
 
 }
 
-/* Contêiner do carrossel */
-.carousel {
-  position: relative;
-  max-width: 100%;
-  overflow: hidden;
-  margin-bottom: 20px;
-}
-/* Faixa de imagens em rotação */
+
+
 .carousel-track {
   display: flex;
   align-items: center;
   gap: 10px;
   transition: transform 0.5s ease-in-out;
-  animation: carouselMove 30s linear infinite;
-  width: calc(100% * 12); /* 6 imagens + 6 duplicadas para loop */
+  animation: carouselMove 20s linear infinite;
+  width: calc(100% * 12); 
 }
 
-/* Estilização das imagens */
+
 .carousel-track img {
   width: 100%;
-  height: 80vh; /* Ocupa toda a altura da faixa */
-  margin: 0 10px; /* Espaçamento entre as imagens */flex-shrink: 0;
-  object-fit: cover; /* Ajusta o enquadramento da imagem */
-  border-radius: 10px; /* Opcional: arredonda as bordas das imagens */
+  height: 80vh; 
+  margin: 0 10px; flex-shrink: 0;
+  object-fit: cover; 
+  border-radius: 10px; 
   transition: transform 0.3s ease;
 }
 
 .carousel-track img:hover {
-  transform: scale(1.2); /* Aumenta ligeiramente a imagem */
+  transform: scale(1.2); 
+}
+.carousel-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
 }
 
-/* Configuração básica do slider */
+.carousel {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  max-width: 100%;
+  scroll-snap-type: x mandatory;
+  margin-bottom: 20px;
+  
+  transition: transform 10s ease-in-out;
+}
+
+.carousel img {
+  flex-shrink: 0; width: 100%;
+  height: auto;
+  max-width: 150px; 
+  height: auto; 
+  margin: 0 10px; 
+  border-radius: 10px; 
+  object-fit: contain; 
+ transition: none;
+}
+.carousel img:hover {
+  transform: none; 
+}
+
+
+.carousel-text-below {
+  text-align: center; 
+  margin-top: 10px; 
+}
+
+
 .slider {
   position: relative;
   width: 400px;
@@ -409,17 +441,17 @@ body > h2 {
   overflow: hidden;
 }
 
-/* Área dos slides */
+
 .slides {
   display: flex;
-  width: 100%; /* 4 slides, cada um com 100% */
+  width: 100%; 
   height: 100%;
-  transition: transform 0.5s ease-in-out; /* Efeito suave ao trocar */
+  transition: transform 0.5s ease-in-out; 
 }
 
-/* Cada slide ocupa 100% do container */
+
 .slide {
-  flex: 0 0 100%; /* Cada slide tem largura de 100% */
+  flex: 0 0 100%; 
 }
 
 .slide img {
@@ -429,7 +461,7 @@ body > h2 {
   border-radius: 10px;
 }
 
-/* Botões de navegação manual */
+
 .manual-navigation {
   position: absolute;
   bottom: 10px;
@@ -473,38 +505,7 @@ body > h2 {
   margin-right: 40px;
 }
 
-/* Controle dos slides usando os inputs */
-.carousel-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centraliza o conteúdo horizontalmente */
-  justify-content: center; /* Centraliza o conteúdo verticalmente */
-}
 
-.carousel {
-  display: flex;
-  overflow: hidden;
-  position: relative;
-  max-width: 100%;
-  scroll-snap-type: x mandatory;
-  margin-bottom: 20px;
-}
-
-.carousel img {
-  flex-shrink: 0; /* Evita que as imagens encolham */width: 80%;
-  height: auto;
-  max-width: 150px; /* Limita a largura máxima das imagens */
-  height: auto; /* Mantém a proporção da imagem */
-  margin: 0 10px; /* Espaçamento entre as imagens */
-  border-radius: 10px; /* Opcional: arredonda as bordas */
-  object-fit: cover; /* Ajusta o enquadramento */
-  transition: transform 0.3s ease-in-out;
-}
-
-.carousel-text-below {
-  text-align: center; /* Alinha o texto no centro */
-  margin-top: 10px; /* Ajuste para separar do carrossel */
-}
 
 .manual-navigation {
   display: flex;
@@ -536,7 +537,7 @@ body > h2 {
  }
 
 h2 {
-  color: #ff69b4; /* Cor rosa para o título */
+  color: #ff69b4; 
   font-weight: bold;
   text-align: center;
   margin-bottom: 20px;
@@ -547,7 +548,7 @@ details {
   border: 2px solid #ff69b4;
   border-radius: 5px;
   overflow: hidden;
-  transition: all 0.3s ease; /* Adiciona suavidade ao elemento */
+  transition: all 0.3s ease; 
 }
 
 summary {
@@ -578,8 +579,8 @@ details > p {
 }
 
 details[open] > p {
-  padding: 20px 30px; /* Adicione o padding quando aberto */
-  max-height: 500px; /* Ajuste esse valor para algo grande o suficiente */
+  padding: 20px 30px; 
+  max-height: 500px; 
 }
 
 details > div {
@@ -589,12 +590,12 @@ details > div {
   background-color: #ffe1ed;
   color: #141414;
   font-size: 14px;
-  transition: max-height 0.5s ease; /* Suaviza a expansão */
+  transition: max-height 0.5s ease; 
 }
 
 @media (min-width: 768px) {
   .carousel img {
-    max-width: 200px; /* Tamanho maior em tablets */
+    max-width: 200px; 
   }
 }
 .pic3 {
@@ -607,26 +608,26 @@ details > div {
   left: 0;
   width: 100%;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-  min-height: 240px; /* Altura da faixa */
+  min-height: 240px; 
   background: linear-gradient(90deg, var(--cor2), var(--cor3), var(--cor2));
   overflow: hidden;
 display: grid;
   justify-content: center;
   align-items: center;
-  background-size: 300%; /* Tamanho maior para suavidade */
-  animation: gradientFlow 30s infinite; /* Animação contínua */
+  background-size: 300%; 
+  animation: gradientFlow 30s infinite; 
   padding: 38px;
 }
 
 
 .pic3 img {
 
-  width: 100%; /* Ajusta a largura das imagens para que se adaptem ao contêiner */
+  width: 100%; 
   max-width: 286px;
   object-fit: contain;
-  height: auto; /* Mantém a proporção da imagem */
-  border-radius: 30px; /* (Opcional) Deixa os cantos das imagens arredondados */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* (Opcional) Adiciona uma sombra leve */
+  height: auto; 
+  border-radius: 30px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 .overlay{
   font-family: "Baloo 2";
@@ -634,25 +635,25 @@ display: grid;
 }
 @media (max-width: 768px) {
   .pic3 img {
-    width: 90%; /* Ajusta a largura para 90% do container */
-    max-width: 90%; /* Limita a largura máxima */
+    width: 90%; 
+    max-width: 90%; 
   }
   .color-band img, h1 {
-    width: 50%; /* Ajusta para telas menores */
-    max-width: 50%; /* Limita a largura máxima */
+    width: 50%; 
+    max-width: 50%; 
   }
   
 }
 
-/* Para telas menores que 480px */
+
 @media (max-width: 480px) {
   .pic3 img {
-    width: 100%; /* Ajusta para ocupar 100% da largura disponível */
-    max-width: 100%; /* Limita a largura máxima */
+    width: 100%; 
+    max-width: 100%; 
   }
   .color-band img, h1 {
-    width: 70%; /* Ajusta para telas muito pequenas */
-    max-width: 70%; /* Limita a largura máxima */
+    width: 70%; 
+    max-width: 70%; 
   }
 }
 .faq-container h2 {
@@ -667,19 +668,19 @@ display: grid;
 }
 
 .faq-container summary {
-  text-align: left; /* Garante que a pergunta esteja alinhada à esquerda */
-  padding: 15px 20px; /* Ajuste o padding para não deixar o texto colado */
+  text-align: left; 
+  padding: 15px 20px; 
   font-size: 19px;
   font-weight: bold;
   background-color: #fff;
   color: var(--cor1);
   border-radius: 5px;
-  transition: background-color 1s ease, transform 1s ease; /* Animações de fundo e movimento */
+  transition: background-color 1s ease, transform 1s ease; 
 }
 
 .faq-container summary:hover {
   background-color: #e6e6e6;
-  transform: translateX(4px); /* Deslocamento suave */
+  transform: translateX(4px); 
 }
 
 .faq-container details[open] summary {
@@ -691,13 +692,13 @@ display: grid;
   margin: 0;
   text-align: left;
   font-family: "baloo 2";
-  padding: 15px 20px; /* Aumenta o espaço dentro da resposta */
+  padding: 15px 20px; 
   font-size: 18px;
   font-weight: lighter;
-  max-height: 0; /* Inicialmente fechado */
-  opacity: 0; /* Inicialmente invisível */
+  max-height: 0; 
+  opacity: 0; 
   overflow: hidden;
-  transition: max-height 0.5s ease-out, opacity 0.5s ease; /* Transições suaves */
+  transition: max-height 0.5s ease-out, opacity 0.5s ease; 
  border-radius:5px;
  background-color:  #ee5fee;
   color: #fff;
@@ -705,9 +706,9 @@ display: grid;
 }
 
 .faq-container details[open] > p {
-  max-height: 500px; /* Valor suficiente para o conteúdo */
-  opacity: 1; /* Torna o conteúdo visível */
-  transition-delay: 0.2s; /* Sem atraso ao abrir */
+  max-height: 500px; 
+  opacity: 1; 
+  transition-delay: 0.2s; 
 }
 
 
@@ -730,12 +731,12 @@ h1,
 h2,
 h3,
 header {
-  font-size: 1.2rem; /* Ajusta para dispositivos móveis */
+  font-size: 1.2rem; 
 }
 
 @media (min-width: 768px) {
   .box {
-    padding: 20px; /* Ajusta para telas maiores */
+    padding: 20px; 
   }
 }
 
@@ -743,13 +744,13 @@ header {
   h1,
   h2,
   header {
-    font-size: 2rem; /* Tamanho maior em tablets e desktops */
+    font-size: 2rem; 
   }
 }
 
 @media (min-width: 768px) {
   .sparkle-button {
-    font-size: 1.5rem; /* Volta ao tamanho normal para telas maiores */
+    font-size: 1.5rem; 
     padding: 10px 40px;
   }
 }
@@ -783,7 +784,7 @@ header {
   }
 
   .sparkle-effects {
-    display: none; /* Esconde efeitos em telas menores */
+    display: none; 
   }
 
   .text-container p {
@@ -793,7 +794,7 @@ header {
   @media (max-width: 480px) {
     h1,
     header {
-      font-size: 1.5rem;
+      font-size: 18px;
     }
 
     h2 {
@@ -801,7 +802,7 @@ header {
     }
 
     .carousel img {
-      max-width: 110px; /* Reduz tamanho em telas menores */
+      max-width: 110px; 
     }
     .carousel {
       margin-bottom: 10px;
@@ -836,37 +837,45 @@ header {
   0% {
     transform: translateX(0);
   }
+  25% {
+    transform: translateX(-25%);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  75% {
+    transform: translateX(-75%);
+  }
   100% {
-    transform: translateX(-50%); /* Move o carrossel em metade do seu tamanho */
+    transform: translateX(-100%);
   }
 }
-
 @media (max-width: 768px) {
   header {
     padding: 10px;
   }
 
   header > h1 {
-    font-size: 1.8rem; /* Tamanho menor da fonte */
+    font-size: 1.8rem; 
   }
 
   header > h3 {
-    font-size: 1rem; /* Tamanho menor da fonte */
+    font-size: 1rem; 
   }
 }
 
-/* Responsividade para telas menores que 480px */
+
 @media (max-width: 480px) {
   header {
     padding: 8px;
   }
 
   header > h1 {
-    font-size: 1.5rem; /* Tamanho ainda menor da fonte */
+    font-size: 1.5rem; 
   }
 
   header > h3 {
-    font-size: 0.9rem; /* Tamanho ainda menor da fonte */
+    font-size: 0.9rem; 
   }
 }
 
@@ -875,15 +884,15 @@ header {
     transform: translate(0, 0);
   }
   25% {
-    transform: translate(10px, 10px); /* Movendo um pouco para baixo e para a direita */
+    transform: translate(10px, 10px); 
   }
   50% {
-    transform: translate(20px, 20px); /* Movendo um pouco mais para baixo e para a direita */
+    transform: translate(20px, 20px); 
   }
   75% {
-    transform: translate(30px, 30px); /* Aumentando ainda mais a queda */
+    transform: translate(30px, 30px); 
   }
   100% {
-    transform: translate(50px, 50px); /* Finalizando a queda diagonal */
+    transform: translate(50px, 50px); 
   }
 }
